@@ -12,8 +12,8 @@ import numpy as np
 import mediapipe as mp
  
 import pygame
-from model import KeyPointClassifier
-from model import PointHistoryClassifier
+from models import KeyPointClassifier
+from models import PointHistoryClassifier
 
 
 def get_args():
