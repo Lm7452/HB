@@ -11,7 +11,7 @@ import cv2 as cv
 import numpy as np
 import mediapipe as mp
  
-import showFrameRate
+from opencvFPS.opencvFPS.main import showFrameRate
 from model import KeyPointClassifier
 from model import PointHistoryClassifier
 
