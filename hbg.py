@@ -10,10 +10,10 @@ from collections import deque
 import cv2 as cv
 import numpy as np
 import mediapipe as mp
- 
-import pygame
-from models import KeyPointClassifier
-from models import PointHistoryClassifier
+
+from utils import CvFpsCalc
+from model import KeyPointClassifier
+from model import PointHistoryClassifier
 
 
 def get_args():
@@ -86,7 +86,7 @@ def main():
         ]
 
     # FPS Measurement ########################################################
-    cvFpsCalc = get_fps(buffer_len=10)
+    cvFpsCalc = CvFpsCalc(buffer_len=10)
 
     # Coordinate history #################################################################
     history_length = 16
