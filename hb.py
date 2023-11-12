@@ -33,7 +33,7 @@ while True:
     cv2.circle(img, (x1, y1), 15, (255, 0, 0), cv2.FILLED)  
     cv2.circle(img, (x2, y2), 15, (255, 0, 0), cv2.FILLED)  
     cv2.line(img, (x1, y1), (x2, y2), (255, 0, 0), 3)
-    length = hypot(x2 - x1, y2 - y1)
+  length = hypot(x2 - x1, y2 - y1)
   vol = np.interp(length, [15, 220], [volMin, volMax])
   print(vol, length)
   volume.SetMasterVolumeLevel(vol, None)  
