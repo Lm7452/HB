@@ -10,8 +10,8 @@ from collections import deque
 import cv2 as cv
 import numpy as np
 import mediapipe as mp
-
-import opencvFPS
+ 
+from opencvFPS import showFrameRate
 from model import KeyPointClassifier
 from model import PointHistoryClassifier
 
@@ -86,7 +86,7 @@ def main():
         ]
 
     # FPS Measurement ########################################################
-    cvFpsCalc = opencvFPS(buffer_len=10)
+    cvFpsCalc = showFrameRate(buffer_len=10)
 
     # Coordinate history #################################################################
     history_length = 16
