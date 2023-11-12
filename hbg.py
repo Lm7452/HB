@@ -11,7 +11,7 @@ import cv2 as cv
 import numpy as np
 import mediapipe as mp
 
-from utils import CvFpsCalc
+import opencvFPS
 from model import KeyPointClassifier
 from model import PointHistoryClassifier
 
@@ -86,7 +86,7 @@ def main():
         ]
 
     # FPS Measurement ########################################################
-    cvFpsCalc = CvFpsCalc(buffer_len=10)
+    cvFpsCalc = opencvFPS(buffer_len=10)
 
     # Coordinate history #################################################################
     history_length = 16
