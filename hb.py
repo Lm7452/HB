@@ -35,7 +35,7 @@ while True:
     cv2.line(img, (x1, y1), (x2, y2), (255, 0, 0), 3)
     length = hypot(x2 - x1, y2 - y1)
     vol = np.interp(length, [15, 220], [volMin, volMax])
-    print(vol, length)
+    print(x1, y1, x2, y2)
     volume.SetMasterVolumeLevel(vol, None)  
   cv2.imshow('Image', img) 
   if cv2.waitKey(1) & 0xff == ord('q'): 
