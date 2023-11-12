@@ -86,7 +86,7 @@ def main():
         ]
 
     # FPS Measurement ########################################################
-    cvFpsCalc = showFrameRate(buffer_len=10)
+    cvFpsCalc = get_fps(buffer_len=10)
 
     # Coordinate history #################################################################
     history_length = 16
